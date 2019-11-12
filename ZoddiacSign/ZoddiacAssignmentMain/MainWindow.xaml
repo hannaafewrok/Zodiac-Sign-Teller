@@ -1,0 +1,67 @@
+﻿<Window x:Class="ZoddiacAssignmentMain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZoddiacAssignmentMain"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl Background="#FF85C7E0">
+            <TabItem x:Name="ZodiacSigns" Header="Zodiac" Width="380px" Background="#FF7FC6D1">
+                <Grid Background="#FF88EDF7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="495*"/>
+                        <ColumnDefinition Width="48*"/>
+                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="48*"/>
+                        <ColumnDefinition Width="176*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="date" HorizontalAlignment="Left" Margin="141,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Height="26" RenderTransformOrigin="-6.208,2.878"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="58,264,0,0" Text="Day" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="44" FontSize="16" RenderTransformOrigin="-1.824,-0.557" FontFamily="Century Schoolbook"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="58,190,0,0" Text="Month" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="83" RenderTransformOrigin="-0.307,0.726" FontSize="16" FontFamily="Century Schoolbook"/>
+                    <TextBox x:Name="month" HorizontalAlignment="Left" Margin="141,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="58" Height="26" RenderTransformOrigin="0.628,-0.333"/>
+                    <Button x:Name="sumbit" Content="GO" HorizontalAlignment="Left" Margin="344,207,0,0" VerticalAlignment="Top" Click="Button_Click" Height="35" Width="48" RenderTransformOrigin="0.757,-0.769"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="58,32,0,0" Text="Are You Ready To FInd Out Your Zodiac Sign?" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="5" Height="39" Width="667" FontFamily="Century Schoolbook" FontSize="26" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,99,0,0" Text="Please Enter Your BirthDate and Month." TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="378" FontSize="18" FontFamily="Century Schoolbook"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Details" Width="380" Background="#FF68BCDC" Height="20" VerticalAlignment="Top">
+                <Grid Background="#FF92EBF3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="133*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="184*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox HorizontalAlignment="Left" Margin="96,153,0,0" VerticalAlignment="Top" Width="128"  Grid.Column="3" SelectionChanged="ComboBox_SelectionChanged" IsDropDownOpen="True" AllowDrop="True">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FFF0F0F0"/>
+                                <GradientStop Color="#FF11ECCE" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <ComboBoxItem Name="Capricon" Selected="capricon_Selected" Background="#FF492A2A" FontWeight="Bold">capricorn</ComboBoxItem>
+                        <ComboBoxItem Name="Taurs" Selected="Taurs_Selected" Background="#FFE63CB0" >Taurs</ComboBoxItem>
+                        <ComboBoxItem Name="Aries" Selected="Aries_Selected" Background="#FFF53409" >Aries</ComboBoxItem>
+                        <ComboBoxItem Name="Aquarius" Selected="Aquaris_Selected" Background="#FF85D7E4" >Aquarius</ComboBoxItem>
+                        <ComboBoxItem Name="Picses" Selected="Picses_Selected" Background="#FFB652F0" >Picses</ComboBoxItem>
+                        <ComboBoxItem Name="Gemini" Selected="Gemini_Selected" Background="#FFE5F00E" >Gemini</ComboBoxItem>
+                        <ComboBoxItem Name="Cancer" Selected="Cancer_Selected" Background="#FFFAFDFD" >Cancer</ComboBoxItem>
+                        <ComboBoxItem Name="Libra" Selected="Libra_Selected" Background="#FF5FEE5F" >Libra</ComboBoxItem>
+                        <ComboBoxItem Name="Virgo" Selected="Virgo_Selected" Background="#FFE4F161" >Virgo</ComboBoxItem>
+                        <ComboBoxItem Name="Sagittarius" Selected="Sagttarius_Selected" Background="#FF54A2E4" >Sagittarius</ComboBoxItem>
+                        <ComboBoxItem Name="Scorpio" Selected="Scorpio_Selected" Background="#FF420D0D" >Scorpio</ComboBoxItem>
+
+
+                    </ComboBox>
+                    <TextBlock HorizontalAlignment="Left" Margin="117,40,0,0" Text="Wanna Know What Your Star Has To Say?" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="37" Width="560" FontFamily="Century Schoolbook" FontSize="22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="76,114,0,0" Text="Please Select Your Birh Month." TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="274" FontFamily="Century Schoolbook" FontSize="18" Grid.ColumnSpan="3"/>
+                    <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="122,114,0,0" Text="Months" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="85" FontSize="18" FontFamily="Century Schoolbook"/>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
